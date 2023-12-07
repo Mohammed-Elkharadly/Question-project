@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Work+Sans:wght@400;600;700&display=swap");
+
+
+/* box-sizing, margin, padding reset */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "Work Sans", sans-serif;
+  font-size: 10px;
+}
+
+:root {
+  /* primary color */
+  --clr-White: hsl(0, 0%, 100%);
+  --clr-Light-pink: hsl(275, 100%, 97%);
+  --clr-Grayish-purple: hsl(292, 16%, 49%);
+  --clr-Dark-gray: hsl(292, 42%, 14%);
+  --transition: 0.5s;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--clr-Light-pink);
+  position: relative;
+  overflow: hidden;
+}
+
+main::before {
+  content: url(./assets/images/background-pattern-desktop.svg);
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@media (max-width: 23em) {
+  main::before {
+    content: url(./assets/images/background-pattern-mobile.svg);
+  }
+}
+
+.container {
+  padding: 2rem;
+  margin: 20rem 0 5rem;
+  background-color: var(--clr-White);
+  border-radius: 1rem;
+  box-shadow: 0px 5px 26px hsla(292, 44%, 14%, 0.38);
+  z-index: 1;
+}
+
+.header {
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+h1 {
+  color: var(--clr-Dark-gray);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+@media (max-width: 23em) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.content-container {
+  padding: 1rem 0;
+}
+
+.content-container:not(:last-child) {
+  border-bottom: 1px solid var(--clr-Light-pink);
+  margin-bottom: 2rem;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+img {
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+img:hover {
+  transform: rotate(180deg);
+}
+
+.question > p {
+  color: var(--clr-Dark-gray);
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: bold;
+}
+
+.question > p:hover {
+  color: hsl(292, 100%, 50%)
+}
+
+.answer {
+  width: 52rem;
+  padding-top: 1rem;
+  color: hsla(292, 44%, 14%, 0.466);
+  margin-bottom: 1.5rem;
+  display: none;
+}
+
+@media (max-width: 40em) {
+  .answer {
+    width: 32rem;
+  }
+}
+
+.btn-minus {
+  display: none;
+}
+
+.show-text {
+  display: block;
+}
+
+.hide-text {
+  display: none;
+}
+
+
