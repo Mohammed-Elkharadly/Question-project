@@ -53,7 +53,6 @@ main::before {
 
 .container {
   padding: 2rem;
-  margin: 20rem 0 5rem;
   background-color: var(--clr-White);
   border-radius: 1rem;
   box-shadow: 0px 5px 26px hsla(292, 44%, 14%, 0.38);
